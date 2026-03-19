@@ -77,4 +77,4 @@ Task_1/
 
 ## Output
 
-![NewsFlow App Screenshot](https://github.com/user-attachments/assets/e4688e35-8bd1-4e9d-9729-4a4df6a3c1c2)
+![NewsFlow App Screenshot](https://github.com/user-attachments/assets/1a2cbafc-16a9-40c7-a3a3-dc8be9c73b17)
