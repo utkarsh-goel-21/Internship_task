@@ -1,6 +1,6 @@
 // Individual news article card
 const NewsCard = ({ article }) => {
-  const { title, description, url, urlToImage, source, publishedAt } = article;
+  const { title, description, url, image, source, publishedAt } = article;
 
   // Format the date
   const formattedDate = new Date(publishedAt).toLocaleDateString("en-US", {
@@ -12,7 +12,7 @@ const NewsCard = ({ article }) => {
   return (
     <div className="news-card">
       <img
-        src={urlToImage || "/placeholder.png"}
+        src={image || "/placeholder.png"}
         alt={title}
         className="news-card__image"
         onError={(e) => (e.target.src = "/placeholder.png")}
