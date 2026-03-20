@@ -25,7 +25,7 @@ This repository contains all tasks completed during the CodTech Full Stack Devel
 | Task | Title | Tech Stack | Status |
 |------|-------|------------|--------|
 | Task 1 | [API Integration - NewsFlow](./Task_1/README.md) | React.js, Vite, NewsAPI | ✅ Completed |
-| Task 2 | Real-Time Chat Application | WebSocket / Socket.io | 🔄 In Progress |
+| Task 2 | [Real-Time Chat Application - ChatFlow](./Task_2/README.md) | React.js, Node.js, Socket.io | ✅ Completed |
 | Task 3 | Real-Time Collaborative Document Editor | React.js, Node.js, MongoDB | 🔄 In Progress |
 | Task 4 | Chrome Extension for Time Tracking | Chrome APIs, Node.js | 🔄 In Progress |
 
