@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-// Screen shown before user joins the chat
 const JoinScreen = ({ onJoin }) => {
   const [username, setUsername] = useState("");
 
@@ -15,13 +14,14 @@ const JoinScreen = ({ onJoin }) => {
   };
 
   return (
-    <div className="join-screen">
-      <div className="join-screen__card">
-        <h1 className="join-screen__title">💬 ChatFlow</h1>
-        <p className="join-screen__subtitle">Enter your name to join the chat</p>
+    <div className="join-overlay">
+      <div className="join-modal">
+        <div className="join-modal__icon">💬</div>
+        <h2 className="join-modal__title">Welcome to ChatFlow</h2>
+        <p className="join-modal__subtitle">Enter your name to join the conversation</p>
         <input
           type="text"
-          className="join-screen__input"
+          className="join-modal__input"
           placeholder="Your name..."
           value={username}
           onChange={(e) => setUsername(e.target.value)}
@@ -30,11 +30,11 @@ const JoinScreen = ({ onJoin }) => {
           autoFocus
         />
         <button
-          className="join-screen__btn"
+          className="join-modal__btn"
           onClick={handleJoin}
           disabled={!username.trim()}
         >
-          Join Chat →
+          Join Chat
         </button>
       </div>
     </div>

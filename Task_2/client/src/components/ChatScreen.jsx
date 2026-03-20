@@ -3,13 +3,11 @@ import useChat from "../hooks/useChat";
 import MessageBubble from "./MessageBubble";
 import UsersList from "./UsersList";
 
-// Main chat screen component
 const ChatScreen = ({ username }) => {
   const [input, setInput] = useState("");
   const { messages, users, sendMessage } = useChat(username);
   const bottomRef = useRef(null);
 
-  // Auto scroll to latest message
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -28,11 +26,27 @@ const ChatScreen = ({ username }) => {
   return (
     <div className="chat">
       <aside className="chat__sidebar">
-        <h2 className="chat__logo">💬 ChatFlow</h2>
+        <div className="chat__brand">
+          <span className="chat__brand-icon">💬</span>
+          <span className="chat__brand-name">ChatFlow</span>
+        </div>
         <UsersList users={users} />
       </aside>
 
       <div className="chat__main">
+        <header className="chat__header">
+          <div className="chat__header-info">
+            <h3 className="chat__header-title"># general</h3>
+            <span className="chat__header-sub">{users.length} online</span>
+          </div>
+          <div className="chat__header-user">
+            <div className="chat__avatar">
+              {username.charAt(0).toUpperCase()}
+            </div>
+            <span className="chat__username-label">{username}</span>
+          </div>
+        </header>
+
         <div className="chat__messages">
           {messages.map((msg, index) => (
             <MessageBubble
@@ -48,7 +62,7 @@ const ChatScreen = ({ username }) => {
           <input
             type="text"
             className="chat__input"
-            placeholder="Type a message..."
+            placeholder={`Message #general`}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={handleKeyDown}
