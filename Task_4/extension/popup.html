@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ProductivityTracker</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <div class="popup">
+      <header class="popup__header">
+        <div class="popup__logo">⏱</div>
+        <h1 class="popup__title">ProductivityTracker</h1>
+      </header>
+
+      <div class="popup__score-card">
+        <p class="popup__score-label">Today's Productivity Score</p>
+        <h2 class="popup__score" id="score">--</h2>
+      </div>
+
+      <div class="popup__stats">
+        <div class="popup__stat popup__stat--productive">
+          <span class="popup__stat-label">Productive</span>
+          <span class="popup__stat-value" id="productive">--</span>
+        </div>
+        <div class="popup__stat popup__stat--unproductive">
+          <span class="popup__stat-label">Unproductive</span>
+          <span class="popup__stat-value" id="unproductive">--</span>
+        </div>
+        <div class="popup__stat popup__stat--neutral">
+          <span class="popup__stat-label">Neutral</span>
+          <span class="popup__stat-value" id="neutral">--</span>
+        </div>
+      </div>
+
+      <button class="popup__btn" id="dashboardBtn">
+        View Full Dashboard →
+      </button>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

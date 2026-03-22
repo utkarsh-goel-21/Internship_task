@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  background: #0f172a;
+  color: #f8fafc;
+  width: 300px;
+}
+
+.popup {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Header ── */
+.popup__header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.popup__logo {
+  font-size: 1.3rem;
+}
+
+.popup__title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+/* ── Score Card ── */
+.popup__score-card {
+  background: #1e293b;
+  border-radius: 12px;
+  padding: 1rem;
+  text-align: center;
+  border: 1px solid #475569;
+}
+
+.popup__score-label {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 0.5rem;
+}
+
+.popup__score {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #3b82f6;
+}
+
+/* ── Stats ── */
+.popup__stats {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.popup__stat {
+  flex: 1;
+  background: #1e293b;
+  border-radius: 10px;
+  padding: 0.75rem 0.5rem;
+  text-align: center;
+  border: 1px solid #475569;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.popup__stat-label {
+  font-size: 0.65rem;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.popup__stat-value {
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.popup__stat--productive .popup__stat-value {
+  color: #22c55e;
+}
+
+.popup__stat--unproductive .popup__stat-value {
+  color: #ef4444;
+}
+
+.popup__stat--neutral .popup__stat-value {
+  color: #94a3b8;
+}
+
+/* ── Button ── */
+.popup__btn {
+  width: 100%;
+  padding: 0.75rem;
+  background: #3b82f6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.popup__btn:hover {
+  background: #2563eb;
+}
