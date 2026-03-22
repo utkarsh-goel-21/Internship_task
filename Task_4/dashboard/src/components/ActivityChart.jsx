@@ -10,7 +10,6 @@ import {
 } from "recharts";
 
 const ActivityChart = ({ stats }) => {
-  // Group stats by date
   const byDate = {};
 
   stats.forEach((entry) => {
@@ -33,8 +32,8 @@ const ActivityChart = ({ stats }) => {
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
       return (
-        <div className="bg-[#1e293b] border border-[#475569] rounded-lg p-3 text-xs">
-          <p className="text-white font-semibold mb-2">{label}</p>
+        <div className="bg-[#27272A] border border-[#3F3F46] rounded-lg p-3 text-xs">
+          <p className="text-[#FAFAFA] font-semibold mb-2">{label}</p>
           {payload.map((p) => (
             <p key={p.name} style={{ color: p.color }}>
               {p.name}: {p.value}m
@@ -47,36 +46,34 @@ const ActivityChart = ({ stats }) => {
   };
 
   return (
-    <Card className="bg-[#1e293b] border-[#475569]">
+    <Card className="bg-[#27272A] border-[#3F3F46]">
       <CardHeader>
-        <CardTitle className="text-white text-sm font-semibold uppercase tracking-wider">
+        <CardTitle className="text-[#A1A1AA] text-sm font-semibold uppercase tracking-wider">
           Daily Activity (minutes)
         </CardTitle>
       </CardHeader>
       <CardContent>
         {chartData.length === 0 ? (
-          <p className="text-[#94a3b8] text-sm">No data yet</p>
+          <p className="text-[#71717A] text-sm">No data yet</p>
         ) : (
           <ResponsiveContainer width="100%" height={250}>
             <BarChart data={chartData}>
               <XAxis
                 dataKey="date"
-                tick={{ fill: "#94a3b8", fontSize: 11 }}
+                tick={{ fill: "#A1A1AA", fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
               />
               <YAxis
-                tick={{ fill: "#94a3b8", fontSize: 11 }}
+                tick={{ fill: "#A1A1AA", fontSize: 11 }}
                 axisLine={false}
                 tickLine={false}
               />
               <Tooltip content={<CustomTooltip />} />
-              <Legend
-                wrapperStyle={{ fontSize: "11px", color: "#94a3b8" }}
-              />
-              <Bar dataKey="productive" fill="#22c55e" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="unproductive" fill="#ef4444" radius={[4, 4, 0, 0]} />
-              <Bar dataKey="neutral" fill="#475569" radius={[4, 4, 0, 0]} />
+              <Legend wrapperStyle={{ fontSize: "11px", color: "#A1A1AA" }} />
+              <Bar dataKey="productive" fill="#22C55E" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="unproductive" fill="#E11D48" radius={[4, 4, 0, 0]} />
+              <Bar dataKey="neutral" fill="#71717A" radius={[4, 4, 0, 0]} />
             </BarChart>
           </ResponsiveContainer>
         )}
