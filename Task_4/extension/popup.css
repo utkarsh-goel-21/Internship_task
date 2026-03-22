@@ -6,8 +6,8 @@
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background: #0f172a;
-  color: #f8fafc;
+  background: #18181B;
+  color: #FAFAFA;
   width: 300px;
 }
 
@@ -32,21 +32,21 @@ body {
 .popup__title {
   font-size: 1rem;
   font-weight: 700;
-  color: #f8fafc;
+  color: #FAFAFA;
 }
 
 /* ── Score Card ── */
 .popup__score-card {
-  background: #1e293b;
+  background: #27272A;
   border-radius: 12px;
   padding: 1rem;
   text-align: center;
-  border: 1px solid #475569;
+  border: 1px solid #3F3F46;
 }
 
 .popup__score-label {
   font-size: 0.72rem;
-  color: #94a3b8;
+  color: #A1A1AA;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 0.5rem;
@@ -55,7 +55,7 @@ body {
 .popup__score {
   font-size: 2.5rem;
   font-weight: 700;
-  color: #3b82f6;
+  color: #E11D48;
 }
 
 /* ── Stats ── */
@@ -66,11 +66,11 @@ body {
 
 .popup__stat {
   flex: 1;
-  background: #1e293b;
+  background: #27272A;
   border-radius: 10px;
   padding: 0.75rem 0.5rem;
   text-align: center;
-  border: 1px solid #475569;
+  border: 1px solid #3F3F46;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
@@ -78,7 +78,7 @@ body {
 
 .popup__stat-label {
   font-size: 0.65rem;
-  color: #94a3b8;
+  color: #A1A1AA;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -89,22 +89,22 @@ body {
 }
 
 .popup__stat--productive .popup__stat-value {
-  color: #22c55e;
+  color: #22C55E;
 }
 
 .popup__stat--unproductive .popup__stat-value {
-  color: #ef4444;
+  color: #E11D48;
 }
 
 .popup__stat--neutral .popup__stat-value {
-  color: #94a3b8;
+  color: #A1A1AA;
 }
 
 /* ── Button ── */
 .popup__btn {
   width: 100%;
   padding: 0.75rem;
-  background: #3b82f6;
+  background: #E11D48;
   color: #fff;
   border: none;
   border-radius: 10px;
@@ -115,5 +115,5 @@ body {
 }
 
 .popup__btn:hover {
-  background: #2563eb;
+  background: #BE123C;
 }
